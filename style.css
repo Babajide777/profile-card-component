@@ -1,0 +1,110 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* Neutral */
+  --Dark-gray: hsl(0, 0%, 59%);
+
+  /* Typography */
+  --f-kumbh: "Kumbh Sans", sans-serif;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--f-kumbh);
+  font-weight: 400;
+  font-size: 14px;
+  background: url(images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg), var(--Dark-cyan);
+  background-position: top -85vh right 50vw, top 50vh left 50vw, center;
+  background-repeat: no-repeat;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  display: grid;
+  width: 350px;
+  max-width: 90%;
+  grid-template-rows: 150px 50px 100px 80px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.profile-card-bg img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.profile-card-image {
+  text-align: center;
+}
+.profile-card-image img {
+  border-radius: 100%;
+  border: 5px solid white;
+  margin-top: -50px;
+}
+
+.profile-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.6rem;
+}
+
+.profile-card-name span {
+  font-weight: lighter;
+}
+
+.profile-card-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid var(--Dark-gray);
+}
+
+.profile-card-stats div h3 {
+  text-align: center;
+}
+
+.profile-card-stats div p {
+  font-weight: lighter;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+}
